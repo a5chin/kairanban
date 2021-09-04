@@ -16,8 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Package
-
-- google_nav_bar: 
+- google_nav_bar: 5.0.5
 - carousel_slider: 4.0.0
 ```
 flutter pub add google_nav_bar
