@@ -26,13 +26,13 @@ class HomePage extends StatelessWidget {
                 },
                 child: Center(
                   child: Hero(
-                      tag: 'imageHero',
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                        child: Image.network(
-                          'https://picsum.photos/500/500?random=0', width: (_width - 45) / 2,
-                        ),
-                      )
+                    tag: 'imageHero',
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      child: Image.network(
+                        'https://picsum.photos/500/500?random=0', width: (_width - 45) / 2,
+                      ),
+                    )
                   ),
                 ),
               ),
