@@ -82,6 +82,25 @@ class HomePage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => SamplePage()),
                         );
                       },
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SamplePage()),
+                          );
+                        },
+                        child: Center(
+                          child: Hero(
+                              tag: 'imageHero',
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                child: Image.network(
+                                  'https://picsum.photos/500/500?random=0', width: (_width - 45) / 2,
+                                ),
+                              )
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ]

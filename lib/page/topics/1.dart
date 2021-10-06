@@ -15,9 +15,7 @@ class Topic1Page extends StatelessWidget {
                       tag: 'imageHero',
                       child: ClipRRect(
                         borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                        child: Image.network(
-                          'https://picsum.photos/500/500?random=0',
-                        ),
+                        child: Image.asset('assets/images/dummy.jpg'),
                       )
                   )
               ),
