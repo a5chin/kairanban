@@ -23,7 +23,6 @@ class Topic3Page extends StatelessWidget {
             Text('内容: 各世帯主に一律10万円の給付'),
             Text('備考: '),
           ],
-
         )
     );
   }

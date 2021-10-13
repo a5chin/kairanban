@@ -23,7 +23,6 @@ class Topic2Page extends StatelessWidget {
                 )
             ),
           ],
-
         )
     );
   }

@@ -6,6 +6,7 @@ import 'package:kairanban/page/topics/2.dart';
 import 'package:kairanban/page/topics/3.dart';
 import 'package:kairanban/page/topics/4.dart';
 
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -106,8 +107,7 @@ class HomePage extends StatelessWidget {
                 ]
             ),
           ],
-    )
+        )
     );
-
   }
 }
