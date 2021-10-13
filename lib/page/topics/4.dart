@@ -11,8 +11,7 @@ class Topic4Page extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Hero(
-                      tag: 'imageHero',
+                  child: Center(
                       child: ClipRRect(
                         borderRadius: BorderRadius.all(Radius.circular(15.0)),
                         child: Image.asset('assets/images/dummy.jpg'),
