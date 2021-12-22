@@ -19,18 +19,26 @@ class HomePage extends StatelessWidget {
       '自治体総決算会議の出欠確認'
     ];
 
+    List _pages = [
+      Topic1Page(),
+      Topic2Page(),
+      Topic3Page(),
+      Topic4Page(),
+    ];
+
     return Scaffold(
         body: ListView(
           children: <Widget>[
-            for(var item in list )
+            for(var i = 0; i < list.length; i++)
+
             Card(
               child: ListTile(
-                title: Text(item),
-                onTap: () {
-                  Navigator.push(
+              title: Text(list[i]),
+              onTap: () {
+                    Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Topic1Page()
+                      builder: (context) => _pages[i]
                     ),
                   );
                 },
