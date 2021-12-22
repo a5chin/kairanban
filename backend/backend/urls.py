@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from .settings import USERS_URL, USERS_ROOT
+from .views import UsersViewer, UserViewer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('users/', UsersViewer.as_view(), name='users'),
+    path('users/<str:name>/', UserViewer.as_view(), name='user'),
+] + static(USERS_URL, document_root=USERS_ROOT)
