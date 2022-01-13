@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:kairanban/page/home/sample.dart';
 
-class ParentingPage extends StatelessWidget {
+
+class AgeCard extends StatelessWidget {
+  String title;
+
+  AgeCard(this.title);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
+    return Column(
         children: [
           GestureDetector(
             onTap: () {
@@ -14,40 +18,38 @@ class ParentingPage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => SamplePage()),
               );
             },
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 200.0,
-              child: Hero(
-                tag: 'imageHero',
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                  child: Card(
-                    elevation: 30,
-                    color: Colors.purpleAccent,
-                    margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
-                    child: Center(
-                      child: ListTile(
-                        title: Text(
-                          '乳幼児',
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: Colors.white
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        leading: Icon(
-                          Icons.baby_changing_station,
-                          color: Colors.white,
-                          size: 60,
-                        )
-                      ),
-                    )
+            child: ListTile(
+                title: Text(
+                  this.title,
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black
                   ),
+                  textAlign: TextAlign.center,
+                ),
+                leading: Icon(
+                  Icons.baby_changing_station,
+                  color: Colors.black,
+                  size: 60,
                 )
-              ),
             ),
           ),
         ]
+    );
+  }
+}
+
+
+class ParentingPage extends StatelessWidget {
+  List title = ['乳幼児', '小学生', '中学生', '高校生', '大学生'];
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          for (var i in title)
+            AgeCard(i)
+        ],
       )
     );
   }

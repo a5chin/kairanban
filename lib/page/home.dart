@@ -12,56 +12,33 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final _width = MediaQuery.of(context).size.width;
 
+    List<String> list = [
+      '第2回自治体給付金申請方法について',
+      'コロナワクチン予約可能な病院一覧',
+      'ゴミ分別方法の変更についてのご連絡',
+      '自治体総決算会議の出欠確認'
+    ];
+
+    List _pages = [
+      Topic1Page(),
+      Topic2Page(),
+      Topic3Page(),
+      Topic4Page(),
+    ];
+
     return Scaffold(
         body: ListView(
           children: <Widget>[
+            for(var i = 0; i < list.length; i++)
+
             Card(
               child: ListTile(
-                title: Text('第2回自治体給付金申請方法について'),
-                onTap: () {
-                  Navigator.push(
+              title: Text(list[i]),
+              onTap: () {
+                    Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Topic1Page()
-                    ),
-                  );
-                },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text('コロナワクチン予約可能な病院一覧'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Topic2Page()
-                    ),
-                  );
-                },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text('ゴミ分別方法の変更についてのご連絡'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Topic3Page()
-                    ),
-                  );
-                },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text('自治体総決算会議の出欠確認'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Topic4Page()
+                      builder: (context) => _pages[i]
                     ),
                   );
                 },
