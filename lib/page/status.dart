@@ -55,7 +55,7 @@ class StatusChecker extends StatelessWidget {
                     value: '安全',
                     groupValue: _status,
                     // onChanged: _selectStatus,
-                    onChanged: (value){},
+                    onChanged: (value) {},
                   ),
                   Text('安全'),
                 ],
@@ -67,7 +67,7 @@ class StatusChecker extends StatelessWidget {
                     value: '未確認',
                     groupValue: _status,
                     // onChanged: _selectStatus,
-                    onChanged: (value){},
+                    onChanged: (value) {},
                   ),
                   Text('未確認'),
                 ],
@@ -79,7 +79,7 @@ class StatusChecker extends StatelessWidget {
                     value: '危険',
                     groupValue: _status,
                     // onChanged: _selectStatus,
-                    onChanged: (value){},
+                    onChanged: (value) {},
                   ),
                   Text('危険'),
                 ],
@@ -91,4 +91,3 @@ class StatusChecker extends StatelessWidget {
     );
   }
 }
-
