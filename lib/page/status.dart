@@ -1,26 +1,5 @@
 import 'package:flutter/material.dart';
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Test App',
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Title'),
-//         ),
-//         body: Center(
-//           child: StateCheck(),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class StateCheck extends StatefulWidget {
-//   @override
-//   StatusChecker createState() => StatusChecker();
-// }
 
 class StatusChecker extends StatelessWidget {
   String _name;
@@ -28,8 +7,6 @@ class StatusChecker extends StatelessWidget {
   StatusChecker(this._name);
 
   String _status = '未選択';
-
-  // void _selectStatus(String status) => setState(() { _status = status; } );
 
   @override
   Widget build(BuildContext context) {
