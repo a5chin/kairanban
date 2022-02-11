@@ -4,7 +4,16 @@ import 'package:kairanban/page/status.dart';
 class Citizens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const List<String> _names = ['内河友哉', '内河ひなの'];
+    const List<String> _names = [
+      '磯野波平',
+      '磯野フネ',
+      '磯野サザエ',
+      '磯野マスオ',
+      '磯野カツオ',
+      '磯野ワカメ',
+      '磯野タラ',
+      'タマ'
+    ];
 
     return Scaffold(
       appBar: AppBar(
